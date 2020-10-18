@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Data.OleDb;
+using System.IO;
 
 namespace Nailmanager
 {
     public partial class report : Form
     {
+        private readonly string ConnectionString = File.ReadAllText(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "db_config.txt"));
         public report()
         {
             InitializeComponent();
@@ -19,7 +21,7 @@ namespace Nailmanager
 
         public DataTable reportr()
         {
-            OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|/db.accdb;Persist Security Info=True;Jet OLEDB:Database Password=mjm2k4");
+            OleDbConnection con = new OleDbConnection(ConnectionString);
             con.Open();
             OleDbCommand myCommand = new OleDbCommand("SELECT * FROM report", con);
             OleDbDataAdapter ad = new OleDbDataAdapter(myCommand);

@@ -7,16 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Data.OleDb;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Nailmanager
 {
     public partial class setslogin : Form
     {
         private OleDbConnection con;
+        private readonly string ConnectionString = File.ReadAllText(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "db_config.txt"));
         public setslogin()
         {
             InitializeComponent();
-            con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|/db.accdb;Persist Security Info=True;Jet OLEDB:Database Password=mjm2k4");
+
 
         }
 

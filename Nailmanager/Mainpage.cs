@@ -15,10 +15,11 @@ namespace Nailmanager
     public partial class Mainpage : Form
     {
         private OleDbConnection con;
+        private readonly string ConnectionString = File.ReadAllText(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "db_config.txt"));
         public Mainpage()
         {
             InitializeComponent();
-            con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|/db.accdb;Persist Security Info=True;Jet OLEDB:Database Password=mjm2k4");
+            con = new OleDbConnection(ConnectionString);
         }
         public static void tkp(object sender, KeyPressEventArgs e)
         {
