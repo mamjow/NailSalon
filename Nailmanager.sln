@@ -1,9 +1,9 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2043
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nailmanager", "Nailmanager\Nailmanager.csproj", "{9CCEF95C-81AC-47B3-85AC-55ED16379330}"
-EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "ZohreManager", "Setup1\Setup1.vdproj", "{05B6C075-FD2E-4CCD-9360-65CDEF69B0EF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,10 +15,11 @@ Global
 		{9CCEF95C-81AC-47B3-85AC-55ED16379330}.Debug|x86.Build.0 = Release|x86
 		{9CCEF95C-81AC-47B3-85AC-55ED16379330}.Release|x86.ActiveCfg = Debug|x86
 		{9CCEF95C-81AC-47B3-85AC-55ED16379330}.Release|x86.Build.0 = Debug|x86
-		{05B6C075-FD2E-4CCD-9360-65CDEF69B0EF}.Debug|x86.ActiveCfg = Debug
-		{05B6C075-FD2E-4CCD-9360-65CDEF69B0EF}.Release|x86.ActiveCfg = Debug
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B070C980-DE02-4385-8470-7C194145082B}
 	EndGlobalSection
 EndGlobal
